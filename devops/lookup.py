@@ -7,4 +7,4 @@ def lookup(index):
     data = json.loads(open("metadata.json", "r").read())
     return open(os.getcwd() + "/" + data[index.__str__()]).read()
 
-lookup(int(sys.argv[1]))
+print(lookup(int(sys.argv[1])))
