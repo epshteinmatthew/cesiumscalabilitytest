@@ -18,7 +18,7 @@ def add(filedata, id):
     print("File added at url "+url)
     return True
 
-add(sys.argv[1], int(sys.argv[0]))
+add(sys.argv[2], int(sys.argv[1]))
 
 
 

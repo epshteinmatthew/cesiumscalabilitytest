@@ -14,4 +14,4 @@ def delete(id):
     print("File with id "+ id.__str__() +" removed.")
     return True
 
-delete(sys.argv[0])
+delete(sys.argv[1])
