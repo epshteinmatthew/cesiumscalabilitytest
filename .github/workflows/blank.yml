@@ -26,6 +26,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Hello World
-        run: python devops/add.py
+        run: python devops/lookup_range.py
         shell: sh
           
