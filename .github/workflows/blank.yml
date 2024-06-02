@@ -25,15 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Run Python Script
-  # You may pin to the exact commit or the version.
-  # uses: jannekem/run-python-script-action@bbfca66c612a28f3eeca0ae40e1f810265e2ea68
-        uses: jannekem/run-python-script-action@v1.7
-        with:
-          # Python script
-          script: python3 methods.py
-            # Fail step if the return code from running the script is non-zero
-          fail-on-error: true# optional, default is true
-          # Include utility functions
-          util: true# optional, default is true
+      - name: Hello World
+        run: python ${{ env.DEVOPS_DIR }}/methods.py
+        shell: sh
           
