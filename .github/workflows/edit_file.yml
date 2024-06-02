@@ -1,4 +1,4 @@
-name: add_file
+name: edit_file
 on:
   workflow_dispatch:
     inputs:
@@ -26,7 +26,7 @@ jobs:
         shell: sh
 
       - name: add_new
-        run: python devops/add.py ${{ github.event.inputs.id }} ${{ github.event.inputs.data }}
+        run: python devops/add.py ${{ github.event.inputs.id }} ${{ github.event.inputs.filedata }}
         shell: sh
 
 
