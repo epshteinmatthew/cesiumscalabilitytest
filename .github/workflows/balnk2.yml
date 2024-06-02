@@ -1,11 +1,5 @@
-# This is a basic workflow to help you get started with Actions
-
-name: lookup_range
-
-# Controls when the workflow will run
+name: lookup_id
 on:
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,6 +15,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: lookup_range
-        run: python devops/lookup_range.py
+        run: python devops/lookup.py
         shell: sh
-          
+
+
+
