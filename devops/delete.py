@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 
 def delete(id):
@@ -13,4 +14,4 @@ def delete(id):
     print("File with id "+ id.__str__() +" removed.")
     return True
 
-delete(112435456758)
+delete(sys.argv[0])

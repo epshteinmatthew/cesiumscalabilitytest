@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import sys
 
 
 def add(filedata, id):
@@ -17,7 +18,7 @@ def add(filedata, id):
     print("File added at url "+url)
     return True
 
-add("dyfhgjhkj;l'k;", 112435456758)
+add(sys.argv[1], int(sys.argv[0]))
 
 
 

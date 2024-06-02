@@ -1,6 +1,10 @@
 name: lookup_id
 on:
   workflow_dispatch:
+    inputs:
+      id:
+        description: 'id of lookup'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -15,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: lookup_range
-        run: python devops/lookup.py
+        run: python devops/lookup.py ${{ github.event.inputs.id }}
         shell: sh
 
 
