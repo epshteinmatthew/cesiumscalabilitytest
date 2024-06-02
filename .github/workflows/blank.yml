@@ -26,6 +26,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Hello World
-        run: python ${{ env.DEVOPS_DIR }}/methods.py
+        run: python devops/methods.py
         shell: sh
           
