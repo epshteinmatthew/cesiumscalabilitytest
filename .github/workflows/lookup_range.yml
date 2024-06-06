@@ -4,7 +4,6 @@ name: lookup_range
 
 # Controls when the workflow will run
 on:
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
      inputs:
@@ -31,7 +30,6 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: "metadata.json"
-           "devops/lookup_range.py"
 
       - id: lookup_range
         run: python devops/lookup_range.py ${{ github.event.inputs.lower_bound }} ${{ github.event.inputs.upper_bound }} 1 none
@@ -51,7 +49,6 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: ${{needs.job1.outputs.output1}}
-            "devops/lookup_range.py"
 
       - name: lookup_range
         run: python devops/lookup_range.py ${{ github.event.inputs.lower_bound }} ${{ github.event.inputs.upper_bound }} 2 ${{needs.job1.outputs.output1}}
