@@ -51,10 +51,10 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            ${{needs.job1.outputs.output1}}
+            ${{needs.first.outputs.output1}}
 
       - name: lookup_range
-        run: python devops/lookup_range.py ${{ github.event.inputs.lower_bound }} ${{ github.event.inputs.upper_bound }} 2 ${{needs.job1.outputs.output1}}
+        run: python devops/lookup_range.py ${{ github.event.inputs.lower_bound }} ${{ github.event.inputs.upper_bound }} 2 ${{needs.first.outputs.output1}}
         shell: sh
 
           
